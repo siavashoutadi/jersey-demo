@@ -12,6 +12,13 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/api/v1.0")
 public class ApiController {
+  @Path("/health")
+  @GET
+  @Produces(MediaType.TEXT_HTML)
+  public String getHealth() {
+    return "OK";
+  }
+
   @Path("/products")
   @GET
   @Produces(MediaType.APPLICATION_JSON)
