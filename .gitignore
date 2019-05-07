@@ -25,3 +25,8 @@ hs_err_pid*
 .idea/
 jersey-demo.iml
 target
+
+.classpath
+.project
+.settings/
+.vscode/
