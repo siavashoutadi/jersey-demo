@@ -16,7 +16,7 @@ public class ApiController {
   @Produces(MediaType.TEXT_HTML)
   public String getHealth() {
     String hostname = System.getenv("HOSTNAME");
-    return "Running version 0.1.0 OK on " + hostname;
+    return "Running version 0.2.0 OK on " + hostname;
   }
 
   @Path("/products")
