@@ -9,22 +9,21 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-
 @Path("/api/v1.0")
 public class ApiController {
   @Path("/health")
   @GET
   @Produces(MediaType.TEXT_HTML)
   public String getHealth() {
-    String hostname =  System.getenv("HOSTNAME");
-    return "Running OK on " + hostname;
+    String hostname = System.getenv("HOSTNAME");
+    return "Running version 0.1.0 OK on " + hostname;
   }
 
   @Path("/products")
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public List<Product> getProducts() {
-   return ProductFactory.getProductImpl().getProducts();
+    return ProductFactory.getProductImpl().getProducts();
   }
 
   @Path("/product/{id}")
